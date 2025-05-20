@@ -74,3 +74,36 @@ carrossel.addEventListener('click', (e) => {
 
   startAutoSlide();
 });
+
+// --- Aqui começa o código para Swipe ---
+
+let startX = 0;
+let endX = 0;
+
+slides.addEventListener('touchstart', (e) => {
+  startX = e.touches[0].clientX;
+});
+
+slides.addEventListener('touchmove', (e) => {
+  endX = e.touches[0].clientX;
+});
+
+slides.addEventListener('touchend', () => {
+  const threshold = 50; // distância mínima para considerar swipe
+  const diffX = startX - endX;
+
+  stopAutoSlide();
+
+  if(diffX > threshold) {
+    // swipe para esquerda → próximo slide
+    updateSlide((index + 1) % totalSlides);
+  } else if(diffX < -threshold) {
+    // swipe para direita → slide anterior
+    updateSlide((index - 1 + totalSlides) % totalSlides);
+  }
+
+  startAutoSlide();
+});
+
+
+

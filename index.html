@@ -5,18 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title></title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
 </head>
 <body>
   <header>
     <video class="capa" autoplay muted loop playsinline>
       <source src="videos/Gif3.mp4">
     </video>
-    <h1>Vivemos momentos incríveis que não podemos nos esquecer...</h1>
+    <h1 data-aos="fade-up">Vivemos momentos incríveis que não podemos nos esquecer...</h1>
 
-    <button id="toggleMusic">Tocar Música 🎵</button>
+    <button id="toggleMusic" data-aos="fade-up">Tocar Música 🎵</button>
   </header>
 
-  <section class="mensagem">
+  <section class="mensagem" data-aos="fade-up">
     <p>
     Durante todo esse tempo distantes, eu achava que te ignorar ou fingir que você não fazia mais parte da minha vida ia me ajudar de alguma forma a te esquecer e conseguir seguir em frente.
     Mas a verdade é que eu não poderia simplesmente esquecer de alguém que fez parte dos melhores momento da minha vida. Vou te confessar que por trás de toda essa minha ausência, eu sempre estava aqui... abrindo e relendo nossas conversas antigas... só para poder dar uma amenizada nessa saudade da gente.
@@ -33,11 +35,11 @@
   
   </section>
 
-  <section class="galeria">
+  <section class="galeria" data-aos="fade-up">
     <h2>Nossos Melhores Momentos💞</h2>
     <h2>Obrigado Por tudo!💕</h2>
     <div class="carrossel">
-  <div class="slides">
+      <div class="slides">
     <div class="slide"><img src="imagens/foto1.jpeg" alt="Foto 1"></div>
     <div class="slide"><img src="imagens/foto2.jpeg" alt="Foto 2"></div>
     <div class="slide"><img src="imagens/Foto5.jpeg" alt="Foto 3"></div>
@@ -49,13 +51,13 @@
     <div class="slide"><video src="videos/Gif3.mp4" muted autoplay loop></video></div>
     <div class="slide"><video src="videos/vd1.mp4" muted autoplay loop></video></div>
     <div class="slide"><video src="videos/vd2.mp4" muted autoplay loop></video></div>
-  </div>
+      </div>
 
   <div class="indicadores"></div>
 </div>
   </section>
 
-  <section class="videos">
+  <section class="videos" data-aos="fade-up">
   <h2>Te esquecer jamais entrará em meus planos!💖</h2>
   
 </section>
@@ -63,5 +65,13 @@
   <audio id="bgMusic" src="musica/teste.mp3" loop></audio>
 
   <script src="script.js"></script>
+  <!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000, // duração da animação em ms
+    once: true // anima só na primeira vez que aparece na tela
+  });
+</script>
 </body>
 </html>
