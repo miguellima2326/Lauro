@@ -11,15 +11,6 @@ body {
 
 header {
   background: #ffe6f0;
-  padding: 40px 20px;
-}
-
-.capa {
-  width: 100%;
-  max-height: 400px;
-  object-fit: cover;
-  border-radius: 12px;
-  margin-bottom: 20px;
 }
 
 h1 {
@@ -53,7 +44,7 @@ button:hover {
 }
 
 .mensagem p {
-  text-align: center;
+  text-align: justify;
   text-justify: inter-word;
   line-height: 1.6;
   hyphens: auto;
@@ -61,6 +52,10 @@ button:hover {
   margin: 20px 0;
   color: #555;
   word-spacing: normal;
+}
+
+.titu {
+  margin-top: 15vw;
 }
 
 .galeria {
@@ -100,18 +95,19 @@ button:hover {
 }
 
 .capa {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
+  width: 100vw;           /* ocupa toda a largura da viewport */
+  max-height: 350px;      /* altura máxima */
+  height: auto;           /* altura automática */
+  object-fit: cover;      
+  object-position: 200% 30%;
+  margin: 0;              /* sem margem */
+  display: block;         /* remove espaços brancos */
+  box-shadow: 0 10px 30px rgba(214, 51, 132, 0.8);
+  border-radius: 10px;    /* se quiser sem borda, use 0 */
+  border: 1px solid #bd2c75; /* adiciona borda */
+  margin-top: 5vw;
 }
 
-.capa {
-  border-radius: 10px;
-  box-shadow: 0 6px 12px rgba(214, 51, 132, 0.3);
-  max-width: 100%;
-  width: 100%;
-}
 
 .carrossel {
     width: 100%;
